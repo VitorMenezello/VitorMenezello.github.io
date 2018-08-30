@@ -1,14 +1,19 @@
 app.controller('HomeCtrl', function($rootScope, $location)
 {
-   $rootScope.activetab = $location.path();
+	$rootScope.activetab = $location.path();
 });
 
-app.controller('SobreCtrl', function($rootScope, $location)
+app.controller('AboutCtrl', function($rootScope, $location)
 {
-   $rootScope.activetab = $location.path();
+	$rootScope.activetab = $location.path();
 });
 
-app.controller('ContatoCtrl', function($rootScope, $location)
+app.controller('WorkCtrl', function($rootScope, $location)
 {
-   $rootScope.activetab = $location.path();
+	$rootScope.activetab = $location.path();
+});
+
+app.controller('ContactCtrl', function($rootScope, $location)
+{
+	$rootScope.activetab = $location.path();
 });
