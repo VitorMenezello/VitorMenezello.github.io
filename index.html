@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="App">
+
 	<head>
+
 		<title>Vitor Menezello</title>
 
 		<!-- Scripts -->
@@ -9,13 +11,29 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-aria.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-messages.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.8/angular-material.min.js"></script>
-		<script src="app.js"></script>
+		<script src="app/app.js"></script>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.8/angular-material.min.css" />
+
 	</head>
-	<body ng-controller="GitHubController">
-		<h1>{{ test }}</h1>
-		<p>I'm hosted with GitHub Pages.</p>
+
+	<body>
+
+		<div class="header">
+			<div>
+				<span>Vitor Menezello</span>
+			</div>
+			<ul class="nav nav-tabs">
+		        <li ng-class="{active: activetab == '/'}"><a href="#/home">Home</a></li>
+		        <li ng-class="{active: activetab == '/about'}"><a href="#/about">About</a></li>
+		        <li ng-class="{active: activetab == '/work'}"><a href="#/work">Work</a></li>
+		        <li ng-class="{active: activetab == '/contact'}"><a href="#/contact">Contact</a></li>
+	    	</ul>
+		</div>
+
+		<div ng-view/>
+
 	</body>
+
 </html>
