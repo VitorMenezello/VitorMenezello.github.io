@@ -1,6 +1,7 @@
-let app = angular.module('App', ['ngRoute', 'ngMaterial', 'ngMessages'])
+let app = angular.module('App', ['ngRoute', 'ngMaterial', 'ngMessages']);
 
-.config(function($routeProvider) {
+app.config(function($routeProvider) {
+   console.log("route", $routeProvider);
    $routeProvider
    .when('/', {
       templateUrl: 'app/views/home.html',
