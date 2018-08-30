@@ -1,4 +1,4 @@
-let app = angular.module('App', ['ngMaterial', 'ngMessages'])
+let app = angular.module('App', ['ngRoute', 'ngMaterial', 'ngMessages'])
 
 .config(function($routeProvider, $locationProvider) {
    $locationProvider.html5Mode(true);
