@@ -3,7 +3,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 
-import {AppRoutingModule} from './app-routing.module';
+import {AppRoutingModule} from './routes/app-routing.module';
+import {LayoutModule} from './layout/layout.module';
 import {AppComponent} from './app.component';
 
 @NgModule({
@@ -13,10 +14,13 @@ import {AppComponent} from './app.component';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        LayoutModule
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule {
     constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
